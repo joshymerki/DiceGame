@@ -165,3 +165,9 @@ main {
   font-weight: 700;
   color: #c7365f;
 }
+
+.hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
