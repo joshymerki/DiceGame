@@ -25,6 +25,7 @@ body {
 /* LAYOUT */
 main {
   position: relative;
+  overflow: hidden;
   width: 100rem;
   height: 60rem;
   background-color: rgba(255, 255, 255, 0.35);
@@ -37,12 +38,32 @@ main {
 }
 
 .player {
-  flex: 50%;
+  position: absolute;
   padding: 9rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: all 0.75s;
+  transform: translateX(0);
+  width: 50%;
+  height: 100%;
+}
+
+.player--1 {
+  transform: translateX(100%);
+}
+
+/*Won Layout*/
+.player-win .player--0 {
+  transform: translateX(-100%);
+}
+.player-win .player--1 {
+  transform: translateX(200%);
+}
+
+.player-win .player.player--winner {
+  transform: translateX(0);
+  width: 100%;
 }
 
 /* ELEMENTS */
@@ -130,7 +151,7 @@ main {
 }
 
 .btn--new {
-  top: 4rem;
+  top: 3rem;
 }
 .btn--roll {
   top: 39.3rem;
