@@ -17,7 +17,7 @@ let playerActiv = 0;
 let scores = [0, 0];
 let currentScore = 0;
 let win = false;
-let numberToWin = 5;
+let numberToWin = 20;
 
 // Function to reset all the Var and HTML
 const resetAll = function () {
